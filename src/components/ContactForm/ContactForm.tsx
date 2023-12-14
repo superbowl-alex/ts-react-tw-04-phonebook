@@ -5,7 +5,7 @@ interface IContactForm {
   onSubmit: (values: { name: string; number: string }, helpers: { resetForm: () => void }) => void;
 }
 
-let schema = yup.object().shape({
+const schema = yup.object().shape({
   name: yup
     .string()
     .matches(
